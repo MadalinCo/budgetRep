@@ -10,7 +10,6 @@ import java.util.List;
 
 
 
-
 @Component
 @RequiredArgsConstructor
 
@@ -57,26 +56,17 @@ public class TransactionService {
         return transaction;
 
     }
-   /* public Transaction update(Transaction transaction, long id){
+    public Transaction update(Transaction transaction, long id){
         Transaction existingTransaction = delete(id);
-        return add(Transaction.builder())
-                .id(id)
-                .product
-    }
-
-
-
-    public Country update(Country country, long id) {
-        Country existingCountry = delete(id);
-        return add(Country.builder()
-                .id(id)
-                .name(existingCountry.getName())
-                .neighbours(existingCountry.getNeighbours())
-                .capital(country.getCapital())
-                .population(country.getPopulation())
-                .area(country.getArea())
-                .continent(existingCountry.getContinent())
+        return addTransaction(Transaction.builder()
+                .id( id)
+                .product(transaction.getProduct())
+                .type(existingTransaction.getType())
+                .amount(Double.parseDouble(transaction.getProduct()))
                 .build());
     }
-    */
+
+
+
+
 }

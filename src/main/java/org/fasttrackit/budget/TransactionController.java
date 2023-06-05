@@ -24,10 +24,10 @@ public class TransactionController {
         return transactionService.addTransaction(transaction);
     }
     @PutMapping
-    /*public Transaction updateTransactionWithId( @PathVariable long id, @RequestBody Transaction transaction){
-        return transactionService.replaceTheTransactionWithId(id, transaction);
+    public Transaction updateTransactionWithId( @PathVariable long id, @RequestBody Transaction transaction){
+        return transactionService.update(transaction, id);
 
-    }*/
+    }
 
     @DeleteMapping("/{id}")
     public Transaction deleteById(@PathVariable long id){

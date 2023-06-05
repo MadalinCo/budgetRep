@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 @Builder
 public class Transaction {
 
-    private final int id;
+    private final long id;
     private final String product;
     private final type type;
     private final double amount;
